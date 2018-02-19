@@ -73,13 +73,16 @@ public class PetOwnerTest {
     public void isOwnerOfTest() {
         // Given
         Pet newPet = new Dog();
+        Pet anotherPet = new Dog();
         PetOwner po = new PetOwner("", newPet);
 
         // When
         boolean outcome = po.isOwnerOf(newPet);
+        boolean poOwnsAnotherPet = po.isOwnerOf(anotherPet);
 
         // Then
         Assert.assertTrue(outcome);
+        Assert.assertFalse(poOwnsAnotherPet);
     }
 
 
@@ -160,11 +163,10 @@ public class PetOwnerTest {
     @Test
     public void getPets() {
         // Given
-        Integer expected = 2;
         Pet oneYearOldPuppy = new Dog(4);
         Pet twoYearOldKitten = new Cat(2);
         Pet[] pets = { oneYearOldPuppy, twoYearOldKitten };
-        PetOwner po = new PetOwner("");
+        PetOwner po = new PetOwner("", oneYearOldPuppy, twoYearOldKitten);
         List<Pet> petList = Arrays.asList(po.getPets());
 
         // When
