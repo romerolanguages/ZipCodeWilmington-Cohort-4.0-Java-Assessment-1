@@ -11,7 +11,9 @@ public class IntegerUtilsTest {
     public void getSumTest() {
         // : Given
         Integer input = 5;
-        Integer expected = 12;
+        //Integer expected = 12;
+        Integer expected = 10; // expected should equal 10, not 12 (sum of 0+1+2+3+4, not including 5)
+
 
         // : When
         Integer actual = IntegerUtils.getSumOfN(input);
@@ -24,7 +26,9 @@ public class IntegerUtilsTest {
     public void testGetProduct() {
         // : Given
         Integer input = 5;
-        Integer expected = 120;
+        //Integer expected = 120;
+        Integer expected = 24; // expected should equal 24, not 120 (product of 1*2*3*4, not including 5)
+        // expected cannot include the value 0 in the multiplication (otherwise the product would always = 0)
 
         // : When
         Integer actual = IntegerUtils.getProductOfN(input);
