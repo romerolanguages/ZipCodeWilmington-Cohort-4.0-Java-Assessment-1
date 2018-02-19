@@ -6,6 +6,21 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+
+        // k = flag height
+        // j = jumpHeightOfTypeJ
+
+        int kByJRemainder = k % j;
+        int constantHeightJump = 1;
+
+        int totalNumberOfJumps = 0;
+
+        if (kByJRemainder == 0) {
+            totalNumberOfJumps = k / j;
+        } else {
+            totalNumberOfJumps = ((k - kByJRemainder) / j) + (kByJRemainder / constantHeightJump);
+        }
+
+        return totalNumberOfJumps;
     }
 }
