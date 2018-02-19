@@ -37,12 +37,7 @@ public class IntegerArrayUtilsTest {
     public void getAverageTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
-<<<<<<< HEAD
-        //Double expected = 2.4;
-        Double expected = 3.0; // the result should be 3.0, not 2.4
-=======
         Double expected = 3.0;
->>>>>>> f476f0b621b52d7eb0a7e901f81b829891aeff98
 
         // : When
         Double actual = IntegerArrayUtils.getAverage(input);

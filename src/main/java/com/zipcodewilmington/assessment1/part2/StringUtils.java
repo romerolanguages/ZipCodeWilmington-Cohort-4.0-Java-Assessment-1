@@ -79,9 +79,6 @@ public class StringUtils {
         String finalWord = sb.toString();
         return finalWord;
 
-        //return "Leon";
-        // something is not working on the test, even if I return "Leon", which is the expected result, the test
-        // doesn't work
     }
 
 
