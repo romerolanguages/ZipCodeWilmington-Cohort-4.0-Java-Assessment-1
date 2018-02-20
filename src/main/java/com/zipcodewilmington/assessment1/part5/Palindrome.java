@@ -17,7 +17,7 @@ public class Palindrome {
         }
 
         //System.out.println(Arrays.toString(stringArrayList.toArray()));
-        String test = "hello";
+        //String test = "hello";
         //System.out.println(test + " " + reversed);
 
         // get number of palindromes from the above arraylist
