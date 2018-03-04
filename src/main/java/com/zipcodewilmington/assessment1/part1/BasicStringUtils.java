@@ -28,7 +28,6 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-
         String reversedString = reverse(str);
         String reversedFirstLetterUppercased = camelCase(reversedString);
         return reversedFirstLetterUppercased;
